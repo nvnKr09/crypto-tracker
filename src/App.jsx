@@ -4,11 +4,13 @@ import HomePage from './pages/Home';
 import DashboardPage from './pages/Dashboard';
 import CoinPage from './pages/Coin';
 import ComparePage from './pages/ComparePage';
+import Header from './components/Common/Header';
 
 const App = () => {
   return (
     <div className='App'>
       <BrowserRouter >
+      <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/dashboard' element={<DashboardPage />} />

@@ -4,8 +4,7 @@ import "./styles.css";
 import { get100Coins } from "../../../functions/get100Coins";
 import { MenuItem, Select } from "@mui/material";
 
-const SelectCoins = ({ crypto1, crypto2, handleCoinChange }) => {
-  const [allCoins, setAllCoins] = useState([]);
+const SelectCoins = ({allCoins, crypto1, crypto2, handleCoinChange }) => {
 
   const styles = {
     height: "2.4rem",
@@ -21,16 +20,6 @@ const SelectCoins = ({ crypto1, crypto2, handleCoinChange }) => {
         borderColor: "#3a80e9",
       },
     },
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = async () => {
-    const totalCoins = await get100Coins();
-    console.log("totalCoins>>>>", totalCoins);
-    setAllCoins(totalCoins);
   };
 
   return (

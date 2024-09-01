@@ -6,7 +6,7 @@ import Footer from '../components/Common/Footer';
 const HomePage = () => {
   return (
     <>
-       <Header />
+       {/* <Header /> */}
        <MainComponent />
        {/* <Footer /> */}
     </>

@@ -1,36 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 import { ArrowUpwardRounded } from "@mui/icons-material";
-
 const BackToTop = () => {
-  let mybutton = document.getElementById("myBtn");
+  const [isVisible, setIsVisible] = useState(false);
 
-  window.onscroll = function () {
-    scrollFunction();
+  const handleScroll = () => {
+    // Set isVisible state based on scroll position
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
   };
 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 300 ||
-      document.documentElement.scrollTop > 300
-    ) {
-      mybutton.style.display = "flex";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
+  // Add event listener when component mounts
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
 
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const topFunction = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <div className="back-to-top-btn" id="myBtn" onClick={() => topFunction()}>
-      <ArrowUpwardRounded className="icon" style={{ color: "var(--blue)" }} />
-    </div>
+    <>
+      {isVisible && (
+        <div
+          className="back-to-top-btn"
+          id="myBtn"
+          onClick={() => topFunction()}
+        >
+          <ArrowUpwardRounded
+            className="icon"
+            style={{ color: "var(--blue)" }}
+          />
+        </div>
+      )}
+    </>
   );
 };
 

@@ -2,7 +2,13 @@ import axios from "axios";
 
 export const get100Coins = () => {
   const myCoins = axios
-    .get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
+    .get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd",
+      {
+        headers: {
+          "x-cg-demo-api-key": "CG-aUbU1LfTh3RvdHHQjzd9M7xS",
+        },
+      },
+    )
     .then((Response) => {
       // console.log("Response>>>>", Response);
       return Response.data;

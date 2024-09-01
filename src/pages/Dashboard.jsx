@@ -52,10 +52,12 @@ const DashboardPage = () => {
       item.name.toLowerCase().includes(search.toLowerCase()) ||
       item.symbol.toLowerCase().includes(search.toLowerCase())
   );
+
+  if (isLoading) return <Loader />;
   
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <BackToTop />
       {isLoading ? (
         <Loader />
