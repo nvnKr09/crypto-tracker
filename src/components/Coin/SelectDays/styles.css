@@ -1,0 +1,28 @@
+.select-days{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+.range-select {
+    height: 2.4rem !important;
+    color: var(--white) !important;
+}
+
+@media screen and (max-width: 800px) {
+    .select-days, .range-select {
+        font-size: 0.9rem !important;
+    }
+    .range-select{
+        height: 2rem !important;        
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .select-days, .range-select {
+        font-size: 0.8rem !important;
+    }
+    .range-select{
+        height: 1.8rem !important;      
+    }
+}
