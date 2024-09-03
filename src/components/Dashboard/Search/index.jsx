@@ -5,7 +5,7 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 const Search = ({search, onSearchChange}) => {
   return (
     <div className='search-flex'>
-        <SearchRoundedIcon style={{fontSize: '1.8rem'}} />
+        <SearchRoundedIcon className='search-icon' />
         <input
             type="text"
             placeholder='Search'

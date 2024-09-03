@@ -5,7 +5,7 @@ export const get100Coins = () => {
     .get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd",
       {
         headers: {
-          "x-cg-demo-api-key": "CG-aUbU1LfTh3RvdHHQjzd9M7xS",
+          "x-cg-demo-api-key": `${import.meta.env.VITE_COINGEKO_API}`,
         },
       },
     )

@@ -10,6 +10,7 @@
     border: 2px solid var(--blue);
     border-radius: 50%;
     background-color: var(--darkgrey);
+    z-index: 100;
 }
 .back-to-top-btn:hover{
     background-color: var(--blue);

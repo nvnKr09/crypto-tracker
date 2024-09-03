@@ -5,6 +5,7 @@ import DashboardPage from './pages/Dashboard';
 import CoinPage from './pages/Coin';
 import ComparePage from './pages/ComparePage';
 import Header from './components/Common/Header';
+import WatchlistPage from './pages/Watchlist';
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
         <Route path='/dashboard' element={<DashboardPage />} />
         <Route path='/coin/:id' element={<CoinPage />} />
         <Route path='/compare' element={<ComparePage />} />
-        {/* <Route path='/watchlist' element={<WatchlistPage />} /> */}
+        <Route path='/watchlist' element={<WatchlistPage />} />
       </Routes>
       </BrowserRouter>
     </div>

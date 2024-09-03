@@ -9,7 +9,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import Grid from "../Grid";
 import List from "../List";
 
-const TabsComponent = ({ coins }) => {
+const TabsComponent = ({ coins, isWatchlistPage, notifyRemove }) => {
   const [value, setValue] = useState("grid");
 
   const handleChange = (event, newValue) => {
@@ -42,14 +42,14 @@ const TabsComponent = ({ coins }) => {
         <TabPanel value="grid">
           <div className="grid-flex">
             {coins.map((coin, idx) => (
-              <Grid coin={coin} key={idx} />
+              <Grid coin={coin} key={idx} delay={((idx+5)%5)*0.1} isWatchlistPage={isWatchlistPage} notifyRemove={notifyRemove} />
             ))}
           </div>
         </TabPanel>
         <TabPanel value="list">
           <table className="list-table">
             {coins.map((coin, idx) => (
-              <List coin={coin} key={idx} />
+              <List coin={coin} key={idx} delay={(idx % 10)*0.1} isWatchlistPage={isWatchlistPage} notifyRemove={notifyRemove} />
             ))}
           </table>
         </TabPanel>

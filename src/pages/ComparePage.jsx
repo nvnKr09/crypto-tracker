@@ -106,12 +106,12 @@ const ComparePage = () => {
         />
         <SelectDays days={days} handleDaysChange={handleDaysChange} />
       </div>
-      <div className="grey-wrapper">
+      <div className="grey-wrapper grey-list">
         <table>
           <List coin={crypto1Data} />
         </table>
       </div>
-      <div className="grey-wrapper">
+      <div className="grey-wrapper grey-list">
         <table>
           <List coin={crypto2Data} />
         </table>

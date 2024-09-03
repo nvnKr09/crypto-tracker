@@ -25,8 +25,8 @@
 .name {
     text-align: left !important;
 }
-.chip-flex{
-    justify-content: space-between;
+.list-row .chip-flex{
+    justify-content: center;
 }
 .img,
 .watchlist {
@@ -38,35 +38,35 @@
 }
 
 @media screen and (max-width: 980px) {
-    .chip-flex{
+    .list-row .chip-flex{
         justify-content: center;
     }
-    .trend-chip {
+    .list-row .trend-chip {
         display: none;
     }
 }
 @media screen and (max-width: 920px) {
-    .total-volume {
+    .list-row .total-volume {
         display: none;
     }
 }
 @media screen and (max-width: 800px) {
-    .coin-logo{
+    .list-row .coin-logo{
         width: 2.8rem;
     }
-    .price-chip{
+    .list-row .price-chip{
         height: 2rem;
         width: 5rem;
     }
-    .watchlist-chip{
+    .list-row .watchlist-chip{
         width: 2.5rem;
         height: 2.5rem;
     }
-    .coin-symbol,
-    .coin-name,
-    .coin-price,
-    .market-cap,
-    .price-chip{
+    .list-row .coin-symbol,
+    .list-row .coin-name,
+    .list-row .coin-price,
+    .list-row .market-cap,
+    .list-row .price-chip{
         font-size: 90%;
     }
     .mobile-view{
@@ -82,48 +82,46 @@
         padding: 0.5rem;
         border-radius: 0.8rem;
     }
-    .coin-logo{
+    .list-row .coin-logo{
         width: 2.5rem;
     }
-    .price-chip{
+    .list-row .price-chip{
         height: 1.5rem;
         width: 4rem;
     }
-    .watchlist{
-        scale: 0.7;
+    .list-row .watchlist{
+        scale: 0.8;
     }
-    .coin-symbol,
-    .coin-name,
-    .coin-price,
-    .market-cap,
-    .price-chip{
-        font-size: 80%;
-    }
-    .chip-flex{
+    .list-row .chip-flex{
         display: none;
     }
 }
-@media screen and (max-width: 400px){
-    .coin-logo{
-        width: 2rem;   
-    }
-    .coin-symbol,
-    .coin-name,
-    .coin-price,
-    .market-cap,
-    .price-chip{
-        font-size: 70%;
-    }
-    .watchlist {
-        scale: 0.6;
-    }
+@media screen and (max-width: 426px){
     .css-13xfq8m-MuiTabPanel-root{
         padding: 1rem !important;
+    }
+}
+@media screen and (max-width: 376px){
+    .list-row .coin-name {
+        display: none;
     }
 }
 
 @media screen and (max-width: 320px) {
     .list-row{
         gap: 0.5rem;
+    }
+    .list-row .coin-logo{
+        width: 1.8rem;   
+    }
+    .list-row .coin-symbol,
+    .list-row .coin-name,
+    .list-row .coin-price,
+    .list-row .market-cap,
+    .list-row .price-chip{
+        font-size: 80%;
+    }
+    .list-row .watchlist {
+        scale: 0.6;
     }
 }

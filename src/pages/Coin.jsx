@@ -68,7 +68,7 @@ const CoinPage = () => {
         <Loader />
       ) : (
         <>
-          <div className="grey-wrapper">
+          <div className="grey-wrapper grey-list">
             <table>
               <List coin={coinData} />
             </table>

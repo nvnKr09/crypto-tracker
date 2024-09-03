@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
-import { get100Coins } from "../../../functions/get100Coins";
 import { MenuItem, Select } from "@mui/material";
 
 const SelectCoins = ({allCoins, crypto1, crypto2, handleCoinChange }) => {

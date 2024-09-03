@@ -11,6 +11,9 @@
     gap: 0.5rem;
     margin: 1rem auto;
 }
+.search-icon {
+    font-size: 1.8rem !important;
+}
 
 .search-flex input {
     width: 100%;
@@ -21,4 +24,25 @@
     color: var(--grey);
     font-size: 1.2rem;
     padding: 0.2rem 0.5rem;
+}
+
+@media screen and (max-width: 526px){
+    .search-flex {
+        height: 2.8rem;
+        gap: 0;
+    }
+    .search-icon {
+        font-size: 1.5rem !important;
+    }
+}
+@media screen and (max-width: 400px){
+    .search-flex {
+        height: 2.6rem;
+    }
+    .search-icon {
+        font-size: 1.3rem !important;
+    }
+    .search-flex input{
+        font-size: 1rem;
+    }
 }

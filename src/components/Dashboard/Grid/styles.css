@@ -64,7 +64,7 @@
 }
 .chip-flex {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
 .price-chip {
@@ -125,4 +125,10 @@
     color: var(--grey);
     font-weight: 600;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 526px){
+  .grid-container {
+    scale: 0.9;
+  }
 }
